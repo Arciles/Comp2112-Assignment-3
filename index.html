@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COMP2112 - Assignment | Marvel Comics</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/simple-sidebar.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Marvel Comics
+                </a>
+            </li>
+            <li>
+                <a href="#">Characters</a>
+            </li>
+            <li>
+                <a href="#">Comics</a>
+            </li>
+            <li>
+                <a href="#">Creators</a>
+            </li>
+            <li>
+                <a href="#">Events</a>
+            </li>
+            <li>
+                <a href="#">Series</a>
+            </li>
+            <li>
+                <a href="#">Stories</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="input-group">
+                        <input type="hidden" name="search_param" value="all" id="search_param">
+                        <input  id="searchValue" type="text" class="form-control" name="x" placeholder="Search item...">
+                        <span class="input-group-btn">
+                    <button id="searchButton" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+                    </div>
+
+                    <!-- spinner -->
+                    <section id="spinner">
+
+                    </section>
+                    <!-- Display results here -->
+                    <section id="results">
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/md5.min.js"></script>
+<script src="bower_components/spin.js/spin.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
