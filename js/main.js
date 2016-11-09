@@ -11,7 +11,6 @@ $(document).ready(function(e){
         $('.input-group #search_param').val(param);
     });
 
-
     var opts = {
         lines: 13 // The number of lines to draw
         , length: 28 // The length of each line
@@ -50,7 +49,7 @@ $(document).ready(function(e){
         event.preventDefault();
 
         var spinner = new Spinner(opts).spin(target);
-        section.innerHTML = ''; 
+        section.innerHTML = '';
         var timeStamp = Date.now() / 1000 | 0;
         var apiKeyHash = md5(timeStamp + API_KEY_PRIVATE + API_KEY_PUBLIC);
         var searchValue = document.querySelector('#searchValue').value;
@@ -80,7 +79,7 @@ $(document).ready(function(e){
 
 
         results.forEach(function (item) {
-            var thumbnail = item.thumbnail.path + '/standard_large.' + item.thumbnail.extension;
+            var thumbnail = item.thumbnail.path + '/portrait_uncanny.' + item.thumbnail.extension;
 
             var events = '';
             if(item.events.returned > 0)
