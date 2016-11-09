@@ -71,7 +71,7 @@ $(document).ready(function(e){
     });
 
     function renderData(rawData){
-        target.display = 'none';
+        target.style.display = 'none';
 
         console.log(rawData);
         var count = rawData.data.count;
