@@ -6,7 +6,7 @@
   "description": "Marvel comic api test site",
   "main": "",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/Arciles/Comp2112-Assignment-3",
   "ignore": [
     "**/.*",
     "node_modules",

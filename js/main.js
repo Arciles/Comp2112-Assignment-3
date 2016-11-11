@@ -77,43 +77,44 @@ $(document).ready(function(e){
         var count = rawData.data.count;
         var results = rawData.data.results;
 
+        if(count > 0 ){
 
-        results.forEach(function (item) {
-            var thumbnail = item.thumbnail.path + '/portrait_uncanny.' + item.thumbnail.extension;
+            results.forEach(function (item) {
+                var thumbnail = item.thumbnail.path + '/portrait_uncanny.' + item.thumbnail.extension;
 
-            var events = '';
-            if(item.events.returned > 0)
-                item.events.items.forEach(function (event, index) {
-                if(index < parseInt(item.events.returned) -1) {
-                    events += event.name + ', ';
-                } else {
-                    events += event.name ;
-                }
+                var events = '';
+                if(item.events.returned > 0)
+                    item.events.items.forEach(function (event, index) {
+                        if(index < parseInt(item.events.returned) -1) {
+                            events += event.name + ', ';
+                        } else {
+                            events += event.name ;
+                        }
 
-            });
-            var series = '';
-            if(item.series.returned > 0)
-                item.series.items.forEach(function (s, index) {
-                    if(index < parseInt(item.series.returned) - 1) {
-                        series += s.name + ', ';
-                    } else {
-                        series += s.name ;
-                    }
-                });
+                    });
+                var series = '';
+                if(item.series.returned > 0)
+                    item.series.items.forEach(function (s, index) {
+                        if(index < parseInt(item.series.returned) - 1) {
+                            series += s.name + ', ';
+                        } else {
+                            series += s.name ;
+                        }
+                    });
 
-            var stories = '';
-            if(item.stories.returned > 0)
-                item.stories.items.forEach(function (story, index) {
-                    if(index < parseInt(item.stories.returned) - 1) {
-                        stories += story.name + ', ';
-                    } else {
-                        stories += story.name ;
-                    }
-                });
+                var stories = '';
+                if(item.stories.returned > 0)
+                    item.stories.items.forEach(function (story, index) {
+                        if(index < parseInt(item.stories.returned) - 1) {
+                            stories += story.name + ', ';
+                        } else {
+                            stories += story.name ;
+                        }
+                    });
 
 
-            var template =
-               `<div class="panel panel-info">
+                var template =
+                    `<div class="panel panel-info">
                             <div class="panel-heading">
                                 <h3 class="panel-title">${item.name}</h3>
                             </div>
@@ -149,9 +150,15 @@ $(document).ready(function(e){
                             </div>
                         </div>`;
 
-            section.innerHTML += template;
+                section.innerHTML += template;
 
-        })
+            })
+
+        } // end of size control
+        else {
+            section.innerHTML += `<h1>There is nothing to display</h1>`
+        }
+
     }
 
 
